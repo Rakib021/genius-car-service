@@ -6,6 +6,7 @@ import './Register.css';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../shared/Loading/Loading';
+import PageTitle from '../../shared/PageTitle/PageTitle';
 
 
 
@@ -53,6 +54,7 @@ const Register = () => {
     return (
         <div>
             <h2 className="register-title">Please at first complete your registration</h2>
+            <PageTitle title="register"/>
 
             <div className="register-form">
                 
@@ -70,6 +72,7 @@ const Register = () => {
             </form>
             <p>Already have an account ? <Link to ="/login" className="text-danger pe-auto text-decoration-none" onClick={navigateLogin}>please Login</Link></p>
              
+
              <SocialLogin></SocialLogin>
             </div>
             
