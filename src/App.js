@@ -11,6 +11,9 @@ import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 import CheackOut from './pages/CheackOut/CheackOut/CheackOut';
+import AddService from './pages/AddService/AddService';
+import ManageServices from './pages/ManageServices/ManageServices';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -26,6 +29,21 @@ function App() {
         <Route path="/checkout" element={
           <RequireAuth>
             <CheackOut></CheackOut>
+          </RequireAuth>
+        }></Route>
+        <Route path="/addservice" element={
+          <RequireAuth>
+            <AddService></AddService>
+          </RequireAuth>
+        }></Route>
+        <Route path="/manage" element={
+          <RequireAuth>
+            <ManageServices></ManageServices>
+          </RequireAuth>
+        }></Route>
+        <Route path="/dashboard" element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
           </RequireAuth>
         }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
